@@ -8,6 +8,7 @@ This application calculates the rewards for customer based on their transactions
 ```
 
 ### How to run all tests
+Jacoco reports should be generated in the build directory inside ```/reports/jacocoHtml```
 ```
 ./gradlew clean test
 ```
