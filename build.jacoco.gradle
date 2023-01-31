@@ -1,0 +1,29 @@
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/reports/jacocoHtml")
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "com/coding/task/rewards/model/*.class"
+            ])
+        }))
+    }
+}
+
+test {
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        includes= ["com.coding.task.rewards.*"]
+        classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+
+    finalizedBy jacocoTestReport
+}
