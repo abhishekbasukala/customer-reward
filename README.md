@@ -1,5 +1,7 @@
 [![CI](https://github.com/abhishekbasukala/customer-reward/actions/workflows/workflow.yml/badge.svg?branch=master&event=push)](https://github.com/abhishekbasukala/customer-reward/actions/workflows/workflow.yml)
 
+[![Coverage](.github/badges/jacoco.svg)](https://github.com/abhishekbasukala/customer-reward/actions/workflows/workflow.yml)
+
 # Customer Rewards Service
 
 This application calculates the rewards for customer based on their transactions.
